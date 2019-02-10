@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "server": "nodemon ./bin/www",
     "lint": "./node_modules/.bin/eslint --ext .js ./controllers",
     "format": "prettier-eslint --write \"controllers/**/*.js\"",
     "precommit": "npm run lint"
@@ -15,7 +15,10 @@
     "debug": "~2.6.9",
     "express": "~4.15.5",
     "mongoose": "^5.4.10",
-    "morgan": "~1.9.0"
+    "morgan": "~1.9.0",
+    "socket.io": "^2.2.0",
+    "swagger-jsdoc": "^3.2.6",
+    "swagger-ui-express": "^4.0.2"
   },
   "devDependencies": {
     "eslint": "^5.13.0",
