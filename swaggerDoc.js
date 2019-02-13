@@ -35,5 +35,9 @@ const options = {
 const specs = swaggerJsdoc(options);
 
 module.exports = app => {
+  app.get('/api-docs.json', (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    res.send(specs);
+  });
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 };
